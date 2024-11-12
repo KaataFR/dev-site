@@ -50,10 +50,59 @@
 
 /* KEYFRAMES */
 
+@keyframes slide-left {
+    from{
+        transform: translateX(1000px);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes buzz {
+    0%{ 
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Masque le spinner par défaut */
+#spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -151,6 +200,11 @@ header li {
     width: 25%;
     text-align: center;
     margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+header li:hover{
+    transform: scale(1.1);
 }
 
 .number {
@@ -161,6 +215,10 @@ header li {
     text-align: center;
     width: 20%;
     font-size: calc(1vh + 0.5vw);
+}
+
+.number:hover{
+    animation: buzz 5s infinite ease-in-out;
 }
 
 /* SECTIONS */
@@ -180,7 +238,6 @@ section {
     /* Évite les marges involontaires */
     display: flex;
     margin-bottom: 0.2vh;
-
 }
 
 
@@ -249,6 +306,7 @@ section h2 {
     position: relative;
     width: 50%;
     box-sizing: border-box;
+    animation: slide-left 2s ease-in-out;
 }
 
 .accueil-logo img {
@@ -330,7 +388,11 @@ section h2 {
     margin: auto;
     border-radius: 1vw;
     box-shadow: 0.1vw 0.1vw 0.5vw red;
+    transition: all 2s ease-in-out;
+    animation: buzz 5s infinite ease-in-out;
+
 }
+
 
 
 /* PAGE ACCUEIL NUMERO 2 */
@@ -364,7 +426,6 @@ section h2 {
     padding-bottom: 2vh;
     text-align: start;
     padding-left: 2.1vw;
-
 }
 
 #accueil-2 p {
@@ -379,6 +440,8 @@ section h2 {
     object-fit: cover;
     overflow: visible;
     padding-left: 10vw;
+    animation: slide-left 2s ease-in-out;
+
 }
 
 #accueil-2-text {
@@ -401,7 +464,7 @@ p .red-text {
     border-radius: 1vw;
     text-shadow: 0.1vw 0.1vw black;
     font-size: calc(0.4vw + 1vh);
-
+    animation: buzz 5s infinite ease-in-out;
 }
 
 
@@ -594,7 +657,6 @@ p .red-text {
     color: white;
     width: 100%;
     text-align: center;
-
 }
 
 #tarifs h2,

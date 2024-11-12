@@ -128,6 +128,7 @@ header li a {
 section {
     height: max-content;
     border-radius: 0;
+    animation: none;
 }
 
 #accueil-2,
@@ -230,6 +231,7 @@ section {
     padding: 5vw;
     width: 100%;
     margin-top: 2vh;
+    animation: none;
     transform: rotate(-7deg) translateX(-20vw);
     width: 120vw;
 }
@@ -487,6 +489,7 @@ section {
     border-radius: 5px;
     height: 8vw;
     font-weight: 500;
+    font-size: calc(1.8vw + 1vh);
 }
 
 .form-group {
@@ -497,6 +500,8 @@ section {
 
 .form-message textarea {
     height: 30vw;
+    font-size: calc(1.8vw + 1vh);
+
 }
 
 #contactForm button {
@@ -518,7 +523,27 @@ section {
 #confirmation p {
     width: 80%;
     text-align: center;
-    font-size: 5vw;
+    font-size: calc(1vh + 2vw);
+}
+
+/* MENTIONS */
+
+#mentions {
+    height: max-content;
+    padding: 0;
+    margin-top: 5vh;
+    border: 0;
+}
+
+#mentions h1{
+    font-size: calc(2vh + 2vw);
+    width: 100%;
+}
+
+.wrapper-mentions{
+    padding-top: 0;
+    height: max-content;
+
 }
 
 

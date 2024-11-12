@@ -60,3 +60,17 @@ document.querySelector('.close_nav').addEventListener('click', function() {
 
 
 
+/* LOADING SPINNER */
+
+    window.addEventListener("load", () => {
+        const spinner = document.getElementById("loading-spinner");
+
+        // Mesurer le temps de latence (temps de chargement de la page)
+        const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+
+        // Calculer la vitesse de l'animation en fonction de la latence (plus la latence est élevée, plus la vitesse est lente)
+        const speed = Math.min(5, loadTime / 500); // Limiter la vitesse pour éviter des valeurs trop lentes
+
+        // Appliquer la nouvelle vitesse à l'animation
+        spinner.style.animationDuration = `${speed}s`;
+    });

@@ -7,7 +7,9 @@ header {
 
 
 
-
+section {
+    animation: none;
+}
 
 
 #accueil-wrapper {
@@ -223,7 +225,7 @@ header {
 
 #contactForm {
     width: 80%;
-    font-size: calc(1.5vw + 1vh);
+    font-size: calc(1.2vw + 1vh);
 }
 
 #contactForm input {
@@ -234,6 +236,7 @@ header {
 .form-message textarea {
     height: 20vw;
     border-radius: 5px;
+    font-size: calc(1.8vw + 1vh);
 }
 
 
