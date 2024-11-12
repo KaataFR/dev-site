@@ -574,7 +574,7 @@ p .red-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./assets/background\ red\ corner.png);
+    background-image: url(../assets/background\ red\ corner.png);
     background-size: cover;
 }
 
