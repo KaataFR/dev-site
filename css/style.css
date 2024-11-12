@@ -60,6 +60,17 @@
     
 }
 
+@keyframes slide-up {
+    from{
+        transform: translateX(1000px);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+
 @keyframes buzz {
     0%{ 
         transform: scale(1);
@@ -339,7 +350,6 @@ section h2 {
 
 .blue {
     background-color: #031450;
-    animation: left 0.5ms ease-in-out;
 }
 
 
