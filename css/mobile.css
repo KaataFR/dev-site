@@ -159,9 +159,7 @@ section {
     margin-top: 0vh;
     height: calc(100vw + 50vh);
     min-height: 60vh;
-    /* Adapte la section à la taille de l’écran */
     padding-top: 5vh;
-    /* Crée des marges autour pour plus de confort visuel */
     background-color: #03145000;
 }
 
@@ -335,8 +333,6 @@ section {
 
 /* SERVICES */
 
-
-#services {}
 
 #services-wrapper {
     width: 95%;
